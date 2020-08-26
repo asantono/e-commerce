@@ -1,7 +1,6 @@
 @import "./variables";
 
 .auth {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin: 1.4rem auto 3rem auto;
@@ -9,6 +8,14 @@
   width: 20rem;
   outline: 2px solid rgba($color-slate-dark, 0.2);
   outline-offset: 1rem;
+  vertical-align: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
 
   &__header {
     width: 20rem;

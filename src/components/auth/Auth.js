@@ -19,7 +19,7 @@ const Auth = () => {
       ? "auth__options--login auth__options--clicked"
       : "auth__options--login";
   return (
-    <div>
+    <div className="auth__container">
       <div className="auth__options">
         <div className={loginClass} id="Login" onClick={(e) => optionsClick(e)}>
           Login
