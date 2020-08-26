@@ -1,0 +1,69 @@
+@import "./variables";
+
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7rem;
+  background-color: $color-white;
+  box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.15);
+  overflow: hidden;
+
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    width: 33%;
+
+    &--image {
+      display: flex;
+      width: 70%;
+      cursor: pointer;
+    }
+  }
+  &__center {
+    display: flex;
+    width: 33%;
+    justify-content: center;
+  }
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    width: 33%;
+
+    &--cart {
+      display: flex;
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-right: 2rem;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+
+  &__login {
+    height: 4rem;
+    width: 12rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: $color-blue-light;
+    color: $color-grey-light;
+    font-weight: 800;
+    font-size: 1.4rem;
+    outline: none;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    @include sm {
+      width: 12rem;
+    }
+
+    &:hover {
+      background-color: $color-grey-light;
+      color: $color-blue-light;
+      border: 2px solid $color-blue-light;
+    }
+  }
+}

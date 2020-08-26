@@ -1,0 +1,36 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include lg {
+    font-size: 54%;
+  }
+  @include md {
+    font-size: 46%;
+  }
+  @include sm {
+    font-size: 44%;
+  }
+  // @include tn {
+  //   font-size: 34%;
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.page-container {
+  min-height: calc(100vh - 25rem);
+}

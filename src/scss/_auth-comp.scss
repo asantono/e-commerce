@@ -1,0 +1,43 @@
+@import "./variables";
+
+.auth-comp {
+  display: flex;
+  justify-items: center;
+  width: 85vw;
+  height: 35rem;
+  margin: 4rem auto;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0) 35%,
+      rgba($color-grey-light, 1) 50%
+    ),
+    url("../imgs/keeplearning.jpg");
+  background-size: auto 100%;
+
+  @include md {
+    background-image: url("../imgs/keeplearning.jpg");
+    background-size: cover;
+    width: 100vw;
+  }
+
+  &__left {
+    @include md {
+      width: 0;
+    }
+    width: 100%;
+  }
+
+  &__right {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+
+    @include md {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 4rem;
+      background-color: rgba($color-white, 0.92);
+    }
+  }
+}
