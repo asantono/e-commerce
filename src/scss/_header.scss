@@ -58,6 +58,7 @@
     font-size: 1.4rem;
     outline: none;
     transition: all 0.4s;
+    -webkit-appearance: none;
     cursor: pointer;
 
     @include sm {
