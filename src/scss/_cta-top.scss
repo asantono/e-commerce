@@ -23,12 +23,7 @@
 
     @include sm {
       width: 100%;
-      background-image: linear-gradient(
-          to left,
-          rgba($color-white, 0) 10%,
-          rgba($color-slate-dark, 1) 25%
-        ),
-        url("../imgs/work.jpg");
+      background-image: url("../imgs/work.jpg");
     }
   }
 
@@ -48,7 +43,10 @@
     }
 
     @include sm {
-      width: 55%;
+      width: 100%;
+      left: 0;
+      padding: 2rem;
+      background-color: rgba($color-slate-dark, 0.9);
       height: 34rem;
     }
 
@@ -88,8 +86,8 @@
       }
 
       @include sm {
-        width: 26rem;
-        font-size: 1.5rem;
+        width: 30rem;
+        font-size: 1.6rem;
       }
 
       &:hover {

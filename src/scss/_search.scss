@@ -31,10 +31,6 @@
   &::placeholder {
     padding-left: 4rem;
     font-size: 1.4rem;
-
-    @include sm {
-      transform: translateY(-1px);
-    }
   }
 
   &__icon {
@@ -42,10 +38,6 @@
     height: 2rem;
     width: 2rem;
     transform: translate(1rem, 0.5rem);
-
-    @include sm {
-      transform: translate(1rem, 0.5rem);
-    }
   }
 
   &__submit--hidden {

@@ -106,17 +106,11 @@ body {
   .search::placeholder {
     padding-left: 4rem;
     font-size: 1.4rem; }
-    @media (max-width: 596px) {
-      .search::placeholder {
-        transform: translateY(-1px); } }
   .search__icon {
     position: absolute;
     height: 2rem;
     width: 2rem;
     transform: translate(1rem, 0.5rem); }
-    @media (max-width: 596px) {
-      .search__icon {
-        transform: translate(1rem, 0.5rem); } }
   .search__submit--hidden {
     visibility: hidden;
     height: 0;
@@ -138,7 +132,7 @@ body {
     @media (max-width: 596px) {
       .cta-top__img {
         width: 100%;
-        background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 10%, #29303b 25%), url("../imgs/work.jpg"); } }
+        background-image: url("../imgs/work.jpg"); } }
   .cta-top__textbox {
     position: absolute;
     display: grid;
@@ -154,7 +148,10 @@ body {
         height: 34rem; } }
     @media (max-width: 596px) {
       .cta-top__textbox {
-        width: 55%;
+        width: 100%;
+        left: 0;
+        padding: 2rem;
+        background-color: rgba(41, 48, 59, 0.9);
         height: 34rem; } }
     .cta-top__textbox--headline {
       font-size: 3.5rem;
@@ -187,8 +184,8 @@ body {
           font-size: 1.6rem; } }
       @media (max-width: 596px) {
         .cta-top__textbox--button {
-          width: 26rem;
-          font-size: 1.5rem; } }
+          width: 30rem;
+          font-size: 1.6rem; } }
       .cta-top__textbox--button:hover {
         color: #1dace3;
         background-color: #f7f7f7; }
