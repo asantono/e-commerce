@@ -66,7 +66,7 @@ const CourseSlider = () => {
               <span className="course-slider__course--bottom--strike">
                 ${el.price}
               </span>
-              {"   "}Sale: ${el.price * sale}
+              {"   "}${el.price * sale}
             </div>
           ) : (
             <div className="course-slider__course--bottom--price">

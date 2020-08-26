@@ -270,7 +270,7 @@ body {
         font-size: 1.6rem;
         text-decoration: line-through;
         color: #696969;
-        margin-right: 2.5rem; }
+        margin: 1rem; }
       .course-slider__course--bottom--button {
         height: 4rem;
         margin-top: auto;
