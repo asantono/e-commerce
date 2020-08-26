@@ -37,5 +37,8 @@
   "devDependencies": {
     "node-sass": "^4.14.1",
     "watch": "^1.0.2"
+  },
+  "engines": {
+    "node": "~10.16.0"
   }
 }
