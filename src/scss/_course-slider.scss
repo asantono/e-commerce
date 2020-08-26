@@ -102,6 +102,7 @@
         background-color: $color-blue-light;
         border: none;
         z-index: 1000;
+        -webkit-appearance: none;
         cursor: pointer;
       }
     }

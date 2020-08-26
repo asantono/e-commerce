@@ -275,6 +275,7 @@ body {
         background-color: #1dace3;
         border: none;
         z-index: 1000;
+        -webkit-appearance: none;
         cursor: pointer; }
     .course-slider__course--back {
       position: relative;
@@ -513,7 +514,6 @@ body {
     @media (max-width: 768px) {
       .auth-comp__right {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 4rem;
-        background-color: rgba(255, 255, 255, 0.92); } }
+        height: 100%;
+        padding-top: 1.5%;
+        background-image: radial-gradient(circle, #f7f7f7 30%, rgba(247, 247, 247, 0.5) 70%, transparent 90%); } }

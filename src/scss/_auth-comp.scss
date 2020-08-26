@@ -34,10 +34,14 @@
 
     @include md {
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 4rem;
-      background-color: rgba($color-white, 0.92);
+      height: 100%;
+      padding-top: 1.5%;
+      background-image: radial-gradient(
+        circle,
+        rgba($color-grey-light, 1) 30%,
+        rgba($color-grey-light, 0.5) 70%,
+        transparent 90%
+      );
     }
   }
 }

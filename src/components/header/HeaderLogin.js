@@ -9,7 +9,7 @@ const HeaderLogin = (props) => {
     <input
       className="header__login"
       type="submit"
-      value="Login/Signup"
+      value="Login"
       onClick={() => navLogin()}
     />
   );
