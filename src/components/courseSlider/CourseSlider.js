@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { courses, sale } from "../../dummyData/courses";
 import useWindowDimensions from "../../customHooks/useWindowDimensions";
 
 const CourseSlider = () => {
@@ -9,58 +10,9 @@ const CourseSlider = () => {
   const [courseSliderAnimate, setcourseSliderAnimate] = useState(
     "course-slider__courses"
   );
-  let pointerBackClass =
-    courseSliderAnimate === "course-slider__courses"
-      ? "course-slider__course--back"
-      : "course-slider__course--back course-slider__opacity";
 
-  let pointerForwardClass =
-    courseSliderAnimate === "course-slider__courses"
-      ? "course-slider__course--forward"
-      : "course-slider__course--forward course-slider__opacity";
-
-  const sale = 0.1;
-
-  const courses = [
-    {
-      name: "The Alchemy of Automation",
-      img: require("../../imgs/alchemy.jpg"),
-      author: "Doug Funny",
-      price: 3900,
-      saleOptIn: true,
-      position: 0,
-      id: 0,
-    },
-    {
-      name: "Small Business Accelerator",
-      img: require("../../imgs/accelerator.jpg"),
-      author: "Corey Matthews",
-      price: 2300,
-      sale: 90,
-      position: 1,
-      id: 1,
-    },
-    {
-      name: "The Digital Nomads Guide To The Galaxy",
-      img: require("../../imgs/airport.jpg"),
-      author: "Aubrey Plaza",
-      price: 2900,
-      saleOptIn: true,
-      position: 2,
-      id: 2,
-    },
-    {
-      name: "The Employees Guide To Firing Your Boss",
-      img: require("../../imgs/laptop.jpg"),
-      author: "Adam Demamp",
-      saleOptIn: true,
-      price: 1200,
-      position: 3,
-      id: 3,
-    },
-  ];
-
-  courses.push({
+  let courseCopy = [...courses];
+  courseCopy.push({
     name: "See More Courses",
     price: "varies",
     author: "our authors",
@@ -95,7 +47,7 @@ const CourseSlider = () => {
     }, 150);
   };
 
-  const courseList = courses.map((el, i) => (
+  const courseList = courseCopy.map((el, i) => (
     <div key={el.position} onClick={() => console.log("oops")}>
       <div className="course-slider__course">
         <img
@@ -130,7 +82,7 @@ const CourseSlider = () => {
           ) : null}
         </div>
       </div>
-      {i === courseCount && i ? (
+      {/* {i === courseCount && i ? (
         <div className={pointerBackClass} onClick={(e) => changeCourseCount(e)}>
           <FaArrowLeft />
         </div>
@@ -142,7 +94,7 @@ const CourseSlider = () => {
         >
           <FaArrowRight />
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   ));
 
@@ -159,7 +111,27 @@ const CourseSlider = () => {
     <div className="course-slider">
       <div className="course-slider__title">Top Courses</div>
       <div className="course-slider__underline" />
-      <div className={courseSliderAnimate}>{activeList}</div>
+      <div className="course-slider__container">
+        {courseCount === 0 ? (
+          <div />
+        ) : (
+          <div
+            className="course-slider__course--back"
+            onClick={(e) => changeCourseCount(e)}
+          >
+            <FaArrowLeft />
+          </div>
+        )}
+        <div className={courseSliderAnimate}>{activeList}</div>
+        {courseCount + showCourses >= courseCopy.length ? null : (
+          <div
+            className="course-slider__course--forward"
+            onClick={(e) => changeCourseCount(e, true)}
+          >
+            <FaArrowRight />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

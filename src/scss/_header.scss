@@ -33,6 +33,10 @@
     padding-right: 4rem;
     width: 33%;
 
+    @include md {
+      padding-right: 2rem;
+    }
+
     &--cart {
       display: flex;
       height: 2.5rem;
