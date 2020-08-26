@@ -10,13 +10,13 @@ html {
   font-size: 62.5%; }
   @media (max-width: 992px) {
     html {
-      font-size: 54%; } }
+      font-size: 58%; } }
   @media (max-width: 768px) {
     html {
-      font-size: 46%; } }
+      font-size: 52%; } }
   @media (max-width: 596px) {
     html {
-      font-size: 44%; } }
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -43,7 +43,7 @@ body {
     width: 30%; }
     .header__left--image {
       display: flex;
-      width: 70%;
+      width: 90%;
       cursor: pointer; }
   .header__center {
     display: flex;
@@ -59,8 +59,8 @@ body {
         padding-right: 2rem; } }
     .header__right--cart {
       display: flex;
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 3.5rem;
+      width: 3.5rem;
       margin-right: 2rem;
       align-self: center;
       cursor: pointer; }
@@ -160,15 +160,18 @@ body {
       font-size: 3.5rem;
       font-weight: 400;
       color: #f7f7f7; }
+      @media (max-width: 768px) {
+        .cta-top__textbox--headline {
+          font-size: 2.8rem; } }
       @media (max-width: 596px) {
         .cta-top__textbox--headline {
           font-size: 2.5rem; } }
     .cta-top__textbox--story {
       color: #f7f7f7;
-      font-size: 1.5rem; }
+      font-size: 1.6rem; }
       @media (max-width: 768px) {
         .cta-top__textbox--story {
-          font-size: 1.5rem; } }
+          font-size: 1.6rem; } }
     .cta-top__textbox--button {
       height: 3.5rem;
       width: 36rem;

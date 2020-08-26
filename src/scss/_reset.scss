@@ -13,13 +13,13 @@ html {
   font-size: 62.5%;
 
   @include lg {
-    font-size: 54%;
+    font-size: 58%;
   }
   @include md {
-    font-size: 46%;
+    font-size: 52%;
   }
   @include sm {
-    font-size: 44%;
+    font-size: 50%;
   }
   // @include tn {
   //   font-size: 34%;

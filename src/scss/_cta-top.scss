@@ -55,16 +55,20 @@
       font-weight: 400;
       color: $color-grey-light;
 
+      @include md {
+        font-size: 2.8rem;
+      }
+
       @include sm {
         font-size: 2.5rem;
       }
     }
     &--story {
       color: $color-grey-light;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
 
       @include md {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
     }
     &--button {
