@@ -38,20 +38,20 @@ body {
   .header__left {
     display: flex;
     align-items: flex-start;
-    width: 33%; }
+    width: 30%; }
     .header__left--image {
       display: flex;
       width: 70%;
       cursor: pointer; }
   .header__center {
     display: flex;
-    width: 33%;
+    width: 40%;
     justify-content: center; }
   .header__right {
     display: flex;
     justify-content: flex-end;
     padding-right: 4rem;
-    width: 33%; }
+    width: 30%; }
     @media (max-width: 768px) {
       .header__right {
         padding-right: 2rem; } }
@@ -183,7 +183,12 @@ body {
       transition: all 0.4s; }
       @media (max-width: 768px) {
         .cta-top__textbox--button {
-          width: 30rem; } }
+          width: 30rem;
+          font-size: 1.6rem; } }
+      @media (max-width: 596px) {
+        .cta-top__textbox--button {
+          width: 26rem;
+          font-size: 1.5rem; } }
       .cta-top__textbox--button:hover {
         color: #1dace3;
         background-color: #f7f7f7; }

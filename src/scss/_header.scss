@@ -14,7 +14,7 @@
   &__left {
     display: flex;
     align-items: flex-start;
-    width: 33%;
+    width: 30%;
 
     &--image {
       display: flex;
@@ -24,14 +24,14 @@
   }
   &__center {
     display: flex;
-    width: 33%;
+    width: 40%;
     justify-content: center;
   }
   &__right {
     display: flex;
     justify-content: flex-end;
     padding-right: 4rem;
-    width: 33%;
+    width: 30%;
 
     @include md {
       padding-right: 2rem;
