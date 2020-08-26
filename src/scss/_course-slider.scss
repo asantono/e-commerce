@@ -127,6 +127,10 @@
         border-radius: 10rem;
         background-color: rgba($color-pink-dark, 0.6);
         z-index: -1;
+
+        @include md {
+          transform: translateX(1.4rem);
+        }
       }
       &:hover::before {
         background-color: $color-pink-dark;
@@ -157,7 +161,7 @@
         z-index: -1;
 
         @include md {
-          // transform: translateX(-1.4rem);
+          transform: translateX(-1.4rem);
         }
       }
       &:hover::after {

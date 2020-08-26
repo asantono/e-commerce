@@ -297,6 +297,9 @@ body {
         border-radius: 10rem;
         background-color: rgba(233, 50, 124, 0.6);
         z-index: -1; }
+        @media (max-width: 768px) {
+          .course-slider__course--back::before {
+            transform: translateX(1.4rem); } }
       .course-slider__course--back:hover::before {
         background-color: #e9327c; }
     .course-slider__course--forward {
@@ -320,6 +323,9 @@ body {
         border-radius: 10rem;
         background-color: rgba(233, 50, 124, 0.6);
         z-index: -1; }
+        @media (max-width: 768px) {
+          .course-slider__course--forward::after {
+            transform: translateX(-1.4rem); } }
       .course-slider__course--forward:hover::after {
         background-color: #e9327c; }
   .course-slider__container {

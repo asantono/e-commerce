@@ -6,7 +6,7 @@ import useWindowDimensions from "../../customHooks/useWindowDimensions";
 const CourseSlider = () => {
   const [courseCount, setCourseCount] = useState(0);
   const { width } = useWindowDimensions(true);
-  let showCourses = width < 596 ? 2 : 3;
+  let showCourses = width <= 596 ? 2 : 3;
   const [courseSliderAnimate, setcourseSliderAnimate] = useState(
     "course-slider__courses"
   );
@@ -39,7 +39,8 @@ const CourseSlider = () => {
         setCourseCount(courseCount + showCourses);
         setcourseSliderAnimate("course-slider__courses course-slider__slidein");
       } else {
-        setCourseCount(courseCount - showCourses);
+        if (courseCount - showCourses < 0) setCourseCount(0);
+        else setCourseCount(courseCount - showCourses);
         setcourseSliderAnimate(
           "course-slider__courses course-slider__slidein--right"
         );
