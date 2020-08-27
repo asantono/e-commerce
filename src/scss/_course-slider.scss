@@ -189,6 +189,10 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
     }
+    @include tn {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr;
+    }
   }
   &__slideout {
     animation-name: slideout;

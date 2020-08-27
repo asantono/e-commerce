@@ -6,7 +6,9 @@ import useWindowDimensions from "../../customHooks/useWindowDimensions";
 const CourseSlider = () => {
   const [courseCount, setCourseCount] = useState(0);
   const { width } = useWindowDimensions(true);
-  let showCourses = width <= 596 ? 2 : 3;
+  let showCourses = 3;
+  if (width <= 596) showCourses = 2;
+  // if (width <= 380) showCourses = 1;
   const [courseSliderAnimate, setcourseSliderAnimate] = useState(
     "course-slider__courses"
   );
@@ -66,7 +68,7 @@ const CourseSlider = () => {
               <span className="course-slider__course--bottom--strike">
                 ${el.price}
               </span>
-              {"   "}${el.price * sale}
+              {"   "}Sale ${el.price * sale}
             </div>
           ) : (
             <div className="course-slider__course--bottom--price">
@@ -99,14 +101,21 @@ const CourseSlider = () => {
     </div>
   ));
 
-  const activeList =
-    showCourses === 3
-      ? [
-          courseList[courseCount],
-          courseList[courseCount + 1],
-          courseList[courseCount + 2],
-        ]
-      : [courseList[courseCount], courseList[courseCount + 1]];
+  let activeList = [];
+  switch (showCourses) {
+    case 3:
+      activeList = [
+        courseList[courseCount],
+        courseList[courseCount + 1],
+        courseList[courseCount + 2],
+      ];
+      break;
+    case 2:
+      activeList = [courseList[courseCount], courseList[courseCount + 1]];
+      break;
+    default:
+      break;
+  }
 
   return (
     <div className="course-slider">

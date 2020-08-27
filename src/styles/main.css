@@ -351,6 +351,10 @@ body {
       .course-slider__courses {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr; } }
+    @media (max-width: 450px) {
+      .course-slider__courses {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr; } }
   .course-slider__slideout {
     animation-name: slideout;
     animation-duration: 0.2s; }
