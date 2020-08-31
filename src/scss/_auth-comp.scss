@@ -28,7 +28,10 @@
 
   &__right {
     padding: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     justify-content: auto;
+    overflow-y: hidden;
     width: 100%;
 
     @include md {
@@ -41,12 +44,6 @@
         rgba($color-grey-light, 0.5) 70%,
         transparent 90%
       );
-    }
-
-    @include sm {
-      width: 100%;
-      height: 100%;
-      padding: auto;
     }
   }
 }

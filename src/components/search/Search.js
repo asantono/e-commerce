@@ -7,9 +7,9 @@ const Search = () => {
     console.log("Entered");
   };
   return (
-    <form onSubmit={(e) => submitForm(e)}>
+    <form className="search__form" onSubmit={(e) => submitForm(e)}>
       <IoIosSearch className="search__icon" />
-      <input className="search" type="text" placeholder="Search" />
+      <input className="search" type="text" placeholder="search" />
       <input className="search__submit--hidden" type="submit" />
     </form>
   );

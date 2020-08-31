@@ -21,9 +21,6 @@ html {
   @include sm {
     font-size: 50%;
   }
-  // @include tn {
-  //   font-size: 34%;
-  // }
 }
 
 body {
@@ -34,5 +31,5 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 25rem);
+  min-height: calc(100vh - 23rem);
 }

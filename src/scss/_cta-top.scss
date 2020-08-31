@@ -9,7 +9,6 @@
 
   &__img {
     display: flex;
-
     padding: 3rem;
     width: 85%;
     height: 34rem;
@@ -35,8 +34,6 @@
     width: 45%;
     height: 30rem;
     left: 10%;
-    bottom: auto;
-    top: auto;
 
     @include md {
       height: 34rem;
@@ -66,10 +63,6 @@
     &--story {
       color: $color-grey-light;
       font-size: 1.6rem;
-
-      @include md {
-        font-size: 1.6rem;
-      }
     }
     &--button {
       height: 3.5rem;
@@ -86,11 +79,6 @@
       transition: all 0.4s;
 
       @include md {
-        width: 30rem;
-        font-size: 1.6rem;
-      }
-
-      @include sm {
         width: 30rem;
         font-size: 1.6rem;
       }

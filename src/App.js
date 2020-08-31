@@ -5,6 +5,7 @@ import "./styles/main.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Authentication from "./pages/Authentication";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -16,7 +17,12 @@ function App() {
             <Route exact path="/">
               <Landing />
             </Route>
-            <Route exact path="/auth" component={Authentication} />
+            <Route exact path="/auth">
+              <Authentication />
+            </Route>
+            <Route exact path="/product">
+              <Product />
+            </Route>
           </Switch>
         </div>
         <Footer />

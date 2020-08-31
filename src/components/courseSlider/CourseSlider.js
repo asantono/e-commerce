@@ -59,7 +59,7 @@ const CourseSlider = () => {
           alt={el.name}
         />
         <div className="course-slider__course--bottom">
-          <div className="course-slider__course--bottom--title">{el.name}</div>
+          <div className="course-slider__course--bottom--title">{el.title}</div>
           <div className="course-slider__course--bottom--author">
             by: {el.author}
           </div>
@@ -67,8 +67,8 @@ const CourseSlider = () => {
             <div className="course-slider__course--bottom--price">
               <span className="course-slider__course--bottom--strike">
                 ${el.price}
-              </span>
-              {"   "}Sale ${el.price * sale}
+              </span>{" "}
+              Sale ${el.price * sale}
             </div>
           ) : (
             <div className="course-slider__course--bottom--price">
@@ -85,19 +85,6 @@ const CourseSlider = () => {
           ) : null}
         </div>
       </div>
-      {/* {i === courseCount && i ? (
-        <div className={pointerBackClass} onClick={(e) => changeCourseCount(e)}>
-          <FaArrowLeft />
-        </div>
-      ) : null}
-      {i === courseCount + showCourses - 1 && courses[i] ? (
-        <div
-          className={pointerForwardClass}
-          onClick={(e) => changeCourseCount(e, true)}
-        >
-          <FaArrowRight />
-        </div>
-      ) : null} */}
     </div>
   ));
 

@@ -3,17 +3,17 @@
 .auth {
   display: flex;
   flex-direction: column;
-  margin: 1.4rem auto 3rem auto;
   height: 24rem;
   width: 20rem;
   outline: 2px solid rgba($color-slate-dark, 0.2);
   outline-offset: 1rem;
-  vertical-align: center;
+  margin: 1.4rem auto 3rem auto;
 
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 0.7rem;
     height: 100%;
   }
 
@@ -27,7 +27,7 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    margin-bottom: 0.7rem;
+
     &--input {
       height: 3rem;
       border: 1px solid rgba($color-slate-dark, 0.4);
@@ -61,6 +61,7 @@
       border: none;
       -webkit-appearance: none;
       cursor: pointer;
+      z-index: 100;
       transition: all 0.4s;
 
       &:hover {
@@ -72,11 +73,9 @@
   }
 
   &__options {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.6rem;
     font-size: 1.6rem;
     font-weight: 800;
     z-index: 100;

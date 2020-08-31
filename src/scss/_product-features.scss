@@ -1,0 +1,44 @@
+@import "./variables";
+
+.product-features {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 56%;
+  margin: 3rem;
+  padding: 3rem;
+  background-color: $color-grey-light;
+  min-height: 20rem;
+
+  @include md {
+    width: 100vw;
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__feature {
+    display: flex;
+    font-size: 1.8rem;
+
+    &--check {
+      height: 3rem;
+      width: 3rem;
+      font-size: 3rem;
+      padding-right: 5rem;
+    }
+  }
+}

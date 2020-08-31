@@ -3,9 +3,10 @@
 .footer {
   position: relative;
   width: 100vw;
-  height: 18rem;
+  height: 16rem;
   overflow: hidden;
-  // background-color: $color-slate-dark;
+  background-color: $color-white;
+  z-index: 999;
 
   &__page-break {
     border-bottom: 2px solid rgba($color-grey-dark, 0.3);
@@ -40,6 +41,7 @@
     width: 100vw;
     justify-content: space-between;
     align-items: center;
+    height: 10rem;
 
     &--logo {
       width: 20%;

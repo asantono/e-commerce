@@ -3,7 +3,7 @@
   width: 28rem;
   height: 3rem;
   border: 2px solid $color-black;
-  border-radius: 20rem;
+  border-radius: 10rem;
   outline: none;
   transition: border 0.3s;
 
@@ -19,6 +19,12 @@
     width: 15rem;
   }
 
+  &__form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
   &:focus {
     border: 2px solid $color-blue-light;
     padding-left: 4rem;
@@ -30,14 +36,17 @@
 
   &::placeholder {
     padding-left: 4rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    overflow: visible;
+    line-height: 1.5rem;
+    text-justify: center;
   }
 
   &__icon {
     position: absolute;
     height: 2rem;
     width: 2rem;
-    transform: translate(1rem, 0.5rem);
+    transform: translateX(1rem);
   }
 
   &__submit--hidden {
