@@ -564,7 +564,6 @@ body {
         position: relative;
         display: flex;
         bottom: 0;
-        min-height: min-content;
         width: 100%;
         background-color: #ffffff;
         margin: 0;
@@ -578,9 +577,6 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid #f7f7f7; }
-    @media (max-width: 992px) {
-      .product-cta__buynow {
-        transform: translateY(0); } }
     .product-cta__buynow--top {
       height: 18rem;
       width: 100vw;
@@ -592,11 +588,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 28rem;
-      margin: 2rem; }
-      @media (max-width: 992px) {
-        .product-cta__buynow--bottom {
-          transform: translateY(0); } }
+      margin: 2rem 2rem 2rem 0; }
       .product-cta__buynow--bottom--price {
         display: flex;
         align-items: center;
@@ -639,17 +631,15 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          margin-top: 2rem;
-          height: 80%; }
+          margin-top: 2rem; }
           @media (max-width: 992px) {
             .product-cta__buynow--bottom--points--medium {
               display: grid;
               grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-              margin-top: 2.8rem;
+              margin-top: 2.6rem;
               column-gap: 2rem;
               row-gap: 1rem;
-              justify-content: space-between;
-              overflow-y: visible; } }
+              justify-content: space-between; } }
 
 .product-features {
   position: relative;
