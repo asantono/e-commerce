@@ -648,7 +648,8 @@ body {
               margin-top: 2.8rem;
               column-gap: 2rem;
               row-gap: 1rem;
-              justify-content: space-between; } }
+              justify-content: space-between;
+              overflow-y: visible; } }
 
 .product-features {
   position: relative;

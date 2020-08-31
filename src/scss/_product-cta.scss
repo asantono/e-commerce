@@ -150,9 +150,9 @@
             grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
             margin-top: 2.8rem;
             column-gap: 2rem;
-
             row-gap: 1rem;
             justify-content: space-between;
+            overflow-y: visible;
           }
         }
       }
