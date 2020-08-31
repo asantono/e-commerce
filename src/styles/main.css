@@ -624,7 +624,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 12rem;
         font-size: 1.6rem;
         margin: 3rem 3rem 2rem 3rem; }
         .product-cta__buynow--bottom--points--medium {
