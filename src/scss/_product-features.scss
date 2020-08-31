@@ -10,7 +10,7 @@
   background-color: $color-grey-light;
   min-height: 20rem;
 
-  @include md {
+  @include lg {
     width: 100vw;
     margin: 0;
   }
@@ -23,7 +23,7 @@
   &__list {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
     column-gap: 3rem;
     row-gap: 2rem;
     margin-top: 2rem;

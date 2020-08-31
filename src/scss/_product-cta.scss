@@ -14,7 +14,7 @@
     width: 56%;
     margin: 3rem;
 
-    @include md {
+    @include lg {
       width: 100%;
     }
 
@@ -44,7 +44,7 @@
     z-index: 100;
     transition: all 0.5s;
 
-    @include md {
+    @include lg {
       position: relative;
       display: flex;
       bottom: 0;
@@ -58,7 +58,7 @@
     &--offset {
       transform: translateY(-9.8rem);
 
-      @include md {
+      @include lg {
         transform: translateY(0);
       }
     }
@@ -68,7 +68,7 @@
     flex-direction: column;
     border: 1px solid $color-grey-light;
 
-    @include md {
+    @include lg {
       transform: translateY(0);
     }
     &--top {
@@ -76,7 +76,7 @@
       width: 100vw;
       object-fit: cover;
 
-      @include md {
+      @include lg {
         width: 100;
       }
     }
@@ -87,7 +87,7 @@
       height: 28rem;
       margin: 2rem;
 
-      @include md {
+      @include lg {
         transform: translateY(0);
       }
 
@@ -145,9 +145,9 @@
           margin-top: 2rem;
           height: 80%;
 
-          @include md {
+          @include lg {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
             margin-top: 2.8rem;
             column-gap: 2rem;
 

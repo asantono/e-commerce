@@ -536,7 +536,7 @@ body {
     justify-content: space-between;
     width: 56%;
     margin: 3rem; }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .product-cta__info {
         width: 100%; } }
     .product-cta__info--title {
@@ -559,7 +559,7 @@ body {
     width: 36%;
     z-index: 100;
     transition: all 0.5s; }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .product-cta__buynow--container {
         position: relative;
         display: flex;
@@ -571,21 +571,21 @@ body {
         box-shadow: 0; } }
     .product-cta__buynow--container--offset {
       transform: translateY(-9.8rem); }
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         .product-cta__buynow--container--offset {
           transform: translateY(0); } }
   .product-cta__buynow {
     display: flex;
     flex-direction: column;
     border: 1px solid #f7f7f7; }
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .product-cta__buynow {
         transform: translateY(0); } }
     .product-cta__buynow--top {
       height: 18rem;
       width: 100vw;
       object-fit: cover; }
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         .product-cta__buynow--top {
           width: 100; } }
     .product-cta__buynow--bottom {
@@ -594,7 +594,7 @@ body {
       justify-content: space-between;
       height: 28rem;
       margin: 2rem; }
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         .product-cta__buynow--bottom {
           transform: translateY(0); } }
       .product-cta__buynow--bottom--price {
@@ -641,10 +641,10 @@ body {
           justify-content: space-between;
           margin-top: 2rem;
           height: 80%; }
-          @media (max-width: 768px) {
+          @media (max-width: 992px) {
             .product-cta__buynow--bottom--points--medium {
               display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+              grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
               margin-top: 2.8rem;
               column-gap: 2rem;
               row-gap: 1rem;
@@ -659,7 +659,7 @@ body {
   padding: 3rem;
   background-color: #f7f7f7;
   min-height: 20rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .product-features {
       width: 100vw;
       margin: 0; } }
@@ -669,7 +669,7 @@ body {
   .product-features__list {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
     column-gap: 3rem;
     row-gap: 2rem;
     margin-top: 2rem;
