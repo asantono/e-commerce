@@ -579,11 +579,11 @@ body {
     border: 1px solid #f7f7f7; }
     .product-cta__buynow--top {
       height: 18rem;
-      width: 100vw;
+      width: 100%;
       object-fit: cover; }
       @media (max-width: 992px) {
         .product-cta__buynow--top {
-          width: 100; } }
+          width: 100vw; } }
     .product-cta__buynow--bottom {
       display: flex;
       flex-direction: column;

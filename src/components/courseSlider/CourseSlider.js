@@ -15,7 +15,7 @@ const CourseSlider = () => {
 
   let courseCopy = [...courses];
   courseCopy.push({
-    name: "See More Courses",
+    title: "See More Courses",
     price: "varies",
     author: "our authors",
     img: require("../../imgs/books.jpg"),

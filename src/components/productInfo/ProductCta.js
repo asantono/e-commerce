@@ -1,8 +1,8 @@
 import React from "react";
-import { courses, sale } from "../../dummyData/courses";
+import { courses } from "../../dummyData/courses";
 
 const ProductCta = () => {
-  const { title, img, author, price, saleOptIn, tagline, adText } = courses[0];
+  const { title, author, tagline, adText } = courses[0];
   return (
     <div className="product-cta">
       <div className="product-cta__info">

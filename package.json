@@ -16,7 +16,6 @@
   "scripts": {
     "dev": "react-scripts start",
     "scss": "node-sass --watch src/scss/main.scss -o src/styles",
-    "prefix": "node postcss /src/styles/main.css --use autoprefixer -d src/styles/prefixed",
     "start": "serve -s build",
     "build": "react-scripts build",
     "heroku-postbuild": "npm run build",
@@ -26,9 +25,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    "since 2015"
-  ],
   "devDependencies": {
     "node-sass": "^4.14.1",
     "watch": "^1.0.2"
@@ -36,5 +32,17 @@
   "engines": {
     "node": "14.8.0",
     "yarn": "1.22.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
