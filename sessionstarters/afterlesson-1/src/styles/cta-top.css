@@ -1,0 +1,55 @@
+.cta-top {
+  position: relative;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-top__img {
+  display: flex;
+  padding: 3rem;
+  width: 85%;
+  height: 34rem;
+  background-image: linear-gradient(to left, #ffffff00 15%, #29303b 40%),
+    url("../imgs/work.jpg");
+  background-size: cover;
+}
+
+.cta-top__textbox {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 45%;
+  left: 10%;
+  height: 30rem;
+  color: #f7f7f7;
+  align-items: center;
+}
+
+.cta-top__textbox--headline {
+  font-size: 3.5rem;
+}
+
+.cta-top__textbox--story {
+  font-size: 1.6rem;
+}
+
+.cta-top__textbox--button {
+  height: 3.5rem;
+  width: 36rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f7f7f7;
+  background-color: #1dace3;
+  border-radius: 10rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.cta-top__textbox--button:hover {
+  color: #1dace3;
+  background-color: #f7f7f7;
+}
