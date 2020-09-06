@@ -1,0 +1,29 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include lg {
+    font-size: 58%;
+  }
+  @include md {
+    font-size: 55%;
+  }
+  @include sm {
+    font-size: 53%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
