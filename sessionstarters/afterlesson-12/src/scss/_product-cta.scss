@@ -1,0 +1,32 @@
+@import "./variables";
+
+.product-cta {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  background-color: $color-slate-dark;
+  height: 36rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 56%;
+    margin: 3rem;
+    color: $color-grey-light;
+
+    &--title {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    &--tagline {
+      font-size: 1.8rem;
+    }
+
+    &--author {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+  }
+}
