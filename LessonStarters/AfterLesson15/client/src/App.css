@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --color-green-light: #009619;
+  --color-green-dark: #00770a;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}

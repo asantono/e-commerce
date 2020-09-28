@@ -1,0 +1,42 @@
+.login-form {
+  display: flex;
+  height: 25rem;
+  width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  box-shadow: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.login-form__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-form__logo {
+  width: 100%;
+  margin-top: -3rem;
+  margin-bottom: -5rem;
+}
+
+.input__text {
+  width: 90%;
+  height: 3rem;
+}
+
+.input__submit {
+  border: none;
+  width: 90%;
+  height: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-green-light);
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.input__submit:hover {
+  background-color: var(--color-green-dark);
+}

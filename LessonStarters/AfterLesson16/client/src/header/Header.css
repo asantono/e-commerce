@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  position: relative;
+  background-color: var(--color-black);
+  height: 4rem;
+  width: 100vw;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__item {
+  color: var(--color-white);
+  font-size: 2rem;
+  padding-right: 3rem;
+  cursor: pointer;
+}

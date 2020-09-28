@@ -1,48 +1,29 @@
 {
-  "name": "e-commerce",
-  "version": "0.1.0",
-  "private": true,
+  "name": "AuthReactMongo",
+  "contributors": [
+    "Anthony Santonocito <emailpapasanto@gmail.com> (https://www.youtube.com/channel/UC3b871DqOlA5tKbizv4J6mg/)"
+  ],
+  "homepage": "https://github.com/asantono/AuthReactMongo",
+  "version": "1.0.0",
+  "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "serve": "^11.3.2"
+    "axios": "^0.20.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.9.20",
+    "nodemon": "^2.0.4",
+    "validator": "^13.1.1"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "scss": "node-sass --watch src/scss/main.scss -o src/styles",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "heroku-postbuild": "npm run build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "devDependencies": {
-    "node-sass": "^4.14.1",
-    "watch": "^1.0.2"
-  },
-  "engines": {
-    "node": "14.8.0",
-    "yarn": "1.22.4"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "frontend": "npm run dev --prefix frontend",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
   }
 }
