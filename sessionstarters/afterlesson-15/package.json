@@ -1,0 +1,18 @@
+{
+  "name": "e-com",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "frontend": "npm start --prefix frontend",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+  }
+}

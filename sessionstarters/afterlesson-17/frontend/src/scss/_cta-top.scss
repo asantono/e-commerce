@@ -1,0 +1,88 @@
+@import "./variables";
+
+.cta-top {
+  position: relative;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    display: flex;
+    padding: 3rem;
+    width: 85%;
+    height: 34rem;
+    background-image: linear-gradient(
+        to left,
+        $color-transparent 15%,
+        $color-slate-dark 40%
+      ),
+      url("../imgs/work.jpg");
+    background-size: cover;
+
+    @include md {
+      width: 100%;
+      background-image: linear-gradient(
+          to left,
+          $color-transparent 15%,
+          $color-slate-dark 30%
+        ),
+        url("../imgs/work.jpg");
+    }
+
+    @include sm {
+      background-image: url("../imgs/work.jpg");
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 45%;
+    left: 10%;
+    height: 30rem;
+    color: $color-grey-light;
+    align-items: center;
+
+    @include md {
+      height: 34rem;
+      width: 60%;
+      left: 3rem;
+    }
+
+    @include sm {
+      width: 100%;
+      left: 0;
+      padding: 2rem;
+      background-color: rgba($color-slate-dark, 0.9);
+    }
+
+    &--headline {
+      font-size: 3.5rem;
+    }
+
+    &--story {
+      font-size: 1.6rem;
+    }
+
+    &--button {
+      height: 3.5rem;
+      width: 36rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-grey-light;
+      background-color: $color-blue-light;
+      border-radius: 10rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.4s;
+
+      &:hover {
+        color: $color-blue-light;
+        background-color: $color-grey-light;
+      }
+    }
+  }
+}
