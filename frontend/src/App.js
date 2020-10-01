@@ -6,13 +6,17 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Authentication from "./pages/Authentication";
 import Product from "./pages/Product";
+import Alert from "./components/alert/Alert";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Router>
         <Header />
         <div className="page-container">
+          <Alert />
           <Switch>
             <Route exact path="/">
               <Landing />
@@ -27,7 +31,7 @@ function App() {
         </div>
         <Footer />
       </Router>
-    </Fragment>
+    </Provider>
   );
 }
 

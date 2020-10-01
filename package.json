@@ -19,6 +19,11 @@
     "mongo": "^0.1.0",
     "mongoose": "^5.9.20",
     "nodemon": "^2.0.4",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^8.3.0",
     "validator": "^13.1.1"
   },
   "scripts": {

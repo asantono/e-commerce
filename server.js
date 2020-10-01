@@ -30,30 +30,7 @@ app.use(cookieParser());
 app.use(authController.blackList("clearance"));
 
 // Routes
-app.use("/api/v1/auth", async (req, res) => {
-  try {
-    console.log(req.body);
-    const { email, password } = req.body;
-    res.status(201).json({ email, password, msg: "Sent from the server!!!" });
-  } catch (err) {
-    console.log("error occured");
-  }
-});
-
-//   try {
-//     const { email, password } = req.body;
-//     const newUser = await User.create({
-//       email,
-//       password,
-//     });
-//     newUser.password = null;
-//     res.status(201).json({ user: newUser });
-//   } catch (err) {
-//     res.status(400).json("error occured");
-//   }
-// });
-
-// app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 // Middleware
 app.use((err, req, res, next) => {

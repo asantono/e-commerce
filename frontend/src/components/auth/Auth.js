@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import logo from "../../imgs/logo.svg";
-import API from "../../utils/API";
+import { useDispatch } from "react-redux";
+import { signupAction, loginAction } from "../../redux/actions/userActions";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitVal, setSubmitVal] = useState("Login");
+
+  const dispatch = useDispatch();
+
   const optionsClick = (e) => {
     console.log(e.target.id);
     setSubmitVal(e.target.id);
   };
-
-  console.log(email);
-  console.log(password);
 
   const updateEmail = (e) => {
     setEmail(e.target.value);
@@ -24,18 +25,9 @@ const Auth = () => {
 
   const submit = async (e) => {
     e.preventDefault();
-    const url = "/auth/signup";
-    const body = {
-      email,
-      password,
-    };
-    const options = { headers: { "Content-Type": "application/json" } };
-    try {
-      const res = await API.post(url, body, options);
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
+    submitVal === "Login"
+      ? dispatch(loginAction(email, password))
+      : dispatch(signupAction(email, password));
   };
 
   // Classes

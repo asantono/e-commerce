@@ -669,3 +669,19 @@ body {
       width: 3rem;
       font-size: 3rem;
       padding-right: 5rem; }
+
+.alert {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #f7f7f7;
+  width: 100vw;
+  min-height: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  z-index: 10000; }
