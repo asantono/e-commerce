@@ -1,0 +1,52 @@
+@import "./variables";
+
+.footer {
+  position: relative;
+  width: 100vw;
+  height: 16rem;
+  overflow: hidden;
+  background-color: $color-white;
+  z-index: 999;
+
+  &__page-break {
+    border-bottom: 2px solid rgba($color-grey-dark, 0.3);
+    width: 100vw;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
+    &--link {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      color: $color-blue-light;
+      margin: 2rem 2rem 0 2rem;
+      text-align: center;
+      transition: all 0.4s;
+
+      &:hover {
+        color: $color-blue-dark;
+      }
+    }
+  }
+  &__lowest {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    height: 10rem;
+
+    &--logo {
+      width: 20%;
+    }
+
+    &--copyright {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-right: 4rem;
+    }
+  }
+}

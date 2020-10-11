@@ -1,0 +1,52 @@
+@import "./variables";
+
+.header-menu {
+  font-size: 2.2rem;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+  width: 12rem;
+  margin-top: 0.4rem;
+  transition: all 0.3s;
+
+  &:hover > &__expand {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    border: 2px solid $color-blue-light;
+    border-radius: 3rem;
+  }
+
+  &__expand {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    height: 0px;
+    width: 12rem;
+    background-color: $color-white;
+    padding-top: 1.4rem;
+    width: 12rem;
+    z-index: 20000;
+    opacity: 0;
+    border: 2px solid $color-blue-light;
+    border-radius: 3rem;
+    transition: opacity 0.3s;
+
+    &--links {
+      display: flex;
+      flex-direction: column;
+      &--text {
+        text-decoration: none;
+        margin-bottom: 1.4rem;
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: $color-blue-light;
+
+        &:hover {
+          color: $color-blue-dark;
+        }
+      }
+    }
+  }
+}
