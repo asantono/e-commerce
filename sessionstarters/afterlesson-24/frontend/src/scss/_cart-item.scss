@@ -1,0 +1,72 @@
+@import "./variables";
+
+.cart-item {
+  display: grid;
+  height: 8rem;
+  grid-template-columns: 5fr 2fr 1fr;
+  margin: 2rem 1rem;
+
+  &__underline {
+    border-bottom: 1px solid $color-blue-light;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+
+  &__remove {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    color: $color-pink-dark;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 1rem;
+    &--title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    &--author {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+
+  &__break {
+    margin-left: auto;
+    border-bottom: 1px solid $color-black;
+    width: 20rem;
+  }
+
+  &__total {
+    margin: 2rem 2rem 2rem auto;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    border: 2px solid $color-blue-light;
+
+    @include md {
+      width: 100%;
+    }
+  }
+}

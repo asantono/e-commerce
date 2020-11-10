@@ -1,0 +1,41 @@
+@import "./variables";
+
+.search {
+  width: 28rem;
+  height: 3rem;
+  border: 2px solid $color-black;
+  border-radius: 10rem;
+  padding-left: 4rem;
+  outline: none;
+
+  @include lg {
+    width: 25rem;
+  }
+
+  @include md {
+    width: 20rem;
+  }
+
+  @include sm {
+    width: 15rem;
+  }
+
+  &::placeholder {
+    font-size: 1.5rem;
+  }
+
+  &:focus {
+    border: 2px solid $color-blue-light;
+
+    &::placeholder {
+      color: $color-transparent;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    transform: translate(1rem, 0.5rem);
+  }
+}

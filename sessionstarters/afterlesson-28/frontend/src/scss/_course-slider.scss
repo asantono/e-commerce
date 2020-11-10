@@ -1,0 +1,241 @@
+@import "./variables";
+
+.course-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 4rem;
+
+  &__course {
+    display: flex;
+    flex-direction: column;
+    height: 34rem;
+    margin: 3rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0.8rem 1.5rem rgba($color-black, 0.15);
+    }
+
+    &--forward {
+      display: flex;
+      overflow: visible;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 5rem;
+      color: $color-grey-light;
+      transform: translateX(-3rem);
+      z-index: 10;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        overflow-x: visible;
+        transform: translateX(-1.1rem);
+        height: 7rem;
+        width: 7rem;
+        border-radius: 10rem;
+        background-color: rgba($color-pink-dark, 0.6);
+        z-index: -1;
+      }
+
+      &:hover::after {
+        background-color: $color-pink-dark;
+      }
+    }
+
+    &--back {
+      display: flex;
+      overflow: visible;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 5rem;
+      color: $color-grey-light;
+      z-index: 10;
+      transform: translateX(3rem);
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        overflow-x: visible;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 10rem;
+        background-color: rgba($color-pink-dark, 0.6);
+        transform: translateX(1.1rem);
+        z-index: -1;
+      }
+
+      &:hover::before {
+        background-color: $color-pink-dark;
+      }
+    }
+
+    &--img {
+      height: 17rem;
+    }
+
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 17rem;
+
+      &--title {
+        display: -webkit-box;
+        text-align: center;
+        height: 4.5rem;
+        margin: 0.7rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &--author {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        margin-left: 3rem;
+        margin-right: 1rem;
+      }
+      &--price {
+        text-align: right;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-right: 2.5rem;
+      }
+
+      &--strike {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+        color: $color-grey-dark;
+        margin: 0.8rem;
+      }
+
+      &--button {
+        height: 4rem;
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-grey-light;
+        background-color: $color-blue-light;
+        border: none;
+        outline: none;
+        z-index: 1000;
+        -webkit-appearance: none;
+        border-radius: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__courses {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include sm {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include tn {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  &__underline {
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgba($color-black, 0.15);
+    width: 70%;
+  }
+
+  &__container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 16fr 1fr;
+  }
+
+  &__slideout {
+    animation-name: slideout;
+    animation-duration: 0.2s;
+  }
+
+  &__slidein {
+    animation-name: slidein;
+    animation-duration: 0.2s;
+  }
+
+  &__slideout-right {
+    animation-name: slideoutRight;
+    animation-duration: 0.2s;
+  }
+
+  &__slidein-right {
+    animation-name: slideinRight;
+    animation-duration: 0.2s;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideinRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideoutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

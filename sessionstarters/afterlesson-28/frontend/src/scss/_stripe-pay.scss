@@ -1,0 +1,129 @@
+@import "./variables";
+
+.stripe-pay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $color-slate-dark;
+  width: 90vw;
+  margin: 2rem auto 3rem auto;
+  padding: 3rem;
+
+  &__title {
+    display: flex;
+    align-self: center;
+    font-size: 3rem;
+    color: $color-grey-light;
+  }
+
+  &__row {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__row-radio {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    justify-content: space-evenly;
+    margin-right: 2.8rem;
+  }
+
+  &__button {
+    padding: 0.8rem;
+    border: none;
+    background-color: $color-blue-light;
+    color: $color-grey-light;
+    box-shadow: 0 0.4rem 0.8rem rgba($color-black, 0.2);
+    width: 100%;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+  }
+
+  &__row-input {
+    font-size: 16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: $color-white;
+    width: 100%;
+    outline: none;
+    border-bottom: 3px solid $color-transparent;
+    border-top: 3px solid $color-transparent;
+    border-left: 0;
+    border-right: 0;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: #aab7c4;
+      font-family: sans-serif;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-pink-dark;
+      font-family: sans-serif;
+    }
+    &:focus:valid {
+      border-bottom: 3px solid $color-blue-light;
+      font-family: sans-serif;
+    }
+  }
+}
+
+.StripeElement {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: $color-white;
+  width: 100%;
+  outline: none;
+  border-bottom: 3px solid $color-transparent;
+  border-top: 3px solid $color-transparent;
+  transition: all 0.3s;
+
+  &--focus {
+    border-bottom: 3px solid $color-blue-light;
+  }
+
+  &--invalid {
+    border-bottom: 3px solid $color-pink-dark;
+  }
+}
+
+.radio {
+  color: $color-grey-light;
+  font-size: 2rem;
+  margin: 0 2rem;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    border: 2px solid $color-blue-light;
+    border-radius: 50%;
+    transform: translateY(1px);
+    height: 2rem;
+    width: 2rem;
+    transition: all 0.3s;
+  }
+
+  &--fill {
+    color: $color-grey-light;
+    font-size: 2rem;
+
+    &::after {
+      content: "";
+      background-color: $color-blue-light;
+      transition: all 0.3s;
+    }
+  }
+}

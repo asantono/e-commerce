@@ -1,0 +1,21 @@
+@import "./variables";
+
+.cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 2rem;
+
+  @include md {
+    padding: 2rem 0;
+  }
+  &__title {
+    text-align: center;
+    color: $color-blue-light;
+    margin-top: 1rem;
+    font-weight: 800;
+    font-size: 4rem;
+  }
+}

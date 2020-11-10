@@ -1,0 +1,132 @@
+@import "./variables";
+
+.product-cta {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  background-color: $color-slate-dark;
+  height: 36rem;
+
+  &__buynow {
+    position: fixed;
+    right: 0;
+    width: 36%;
+    margin: 3rem 3rem 2rem 2rem;
+    background-color: $color-grey-light;
+    border: 1px solid $color-grey-light;
+    box-shadow: 0 0.7rem 1.2rem rgba($color-black, 0.2);
+    transition: all 0.5s;
+
+    @include lg {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    &--offset {
+      transform: translateY(-9rem);
+
+      @include lg {
+        transform: translateY(0);
+      }
+    }
+
+    &--top {
+      height: 18rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+
+      &--price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.5rem;
+        font-weight: 600;
+
+        &--slash {
+          font-size: 1.6rem;
+          margin-left: 2rem;
+          text-decoration: line-through;
+        }
+      }
+
+      &--points {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.6rem;
+        margin: 3rem 3rem 2rem 3rem;
+
+        &--medium {
+          margin-top: 2rem;
+
+          @include lg {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            margin-top: 2.6rem;
+            column-gap: 2rem;
+            row-gap: 1rem;
+          }
+        }
+      }
+
+      &--addtocart {
+        height: 4rem;
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 2rem;
+        border-radius: 10rem;
+        border: 2px solid $color-blue-light;
+        color: $color-grey-light;
+        font-size: 2rem;
+        font-weight: 600;
+        background-color: $color-blue-light;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        transition: all 0.4s;
+
+        &:hover {
+          color: $color-blue-light;
+          background-color: $color-grey-light;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 56%;
+    margin: 3rem;
+    color: $color-grey-light;
+
+    @include lg {
+      width: 100vw;
+    }
+
+    &--title {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    &--tagline {
+      font-size: 1.8rem;
+    }
+
+    &--author {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+  }
+}
