@@ -1,6 +1,7 @@
 ## THIS IS A TEACHING REPOSITORY
 
 Finished application repository: [github](https://github.com/asantono/e-commerce-complete)
+
 Finished application live site: [e-com](https://e-commerce-papa-santo.herokuapp.com/)
 
 ## This is the repository for my e-commerce course
